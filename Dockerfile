@@ -14,7 +14,7 @@
 # This DockerFile creates a Docker image derived off of a UM-enabled Apama image, with EPL code for receiving/sending events over UM
 
 ARG APAMA_IMAGE=apama_um_enabled
-FROM store/softwareag/apama-correlator:10.5
+FROM melaniemonnereau/correlator-base-image:latest
 MAINTAINER SoftwareAG
 
 COPY --chown=sagadmin:sagadmin common.mon sender.mon um-connectivity.yaml init-sender.yaml ${APAMA_WORK}/UMSample/
