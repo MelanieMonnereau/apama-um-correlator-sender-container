@@ -20,5 +20,3 @@ MAINTAINER SoftwareAG
 COPY --chown=sagadmin:sagadmin common.mon sender.mon um-connectivity.yaml init-sender.yaml ${APAMA_WORK}/UMSample/
 
 WORKDIR ${APAMA_WORK}/UMSample/
-
-CMD ["correlator", "--config", "um-connectivity.yaml", "--config", "init-sender.yaml"]

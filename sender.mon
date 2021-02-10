@@ -15,6 +15,7 @@ monitor Sender {
 	action onload() {
 		ConnectivityPlugins.onApplicationInitialized();
 		on all wait(1.0) {
+			log "Sending SimpleEvent";
 			send SimpleEvent("The current epoch is " + currentTime.toString()) to UM_CHANNEL;
 		}
 
