@@ -17,7 +17,7 @@ This sample demonstrates two Apama correlators communicating with each other
 via a UM realm server, all in separate containers. It uses Docker Stack,
 configured via 'docker-compose.yml' in this directory.
 
-Test2
+Test3
 ## BEFORE YOU START 
 
 The Sample requires a base image for Apama and Universal Messaging. You have
