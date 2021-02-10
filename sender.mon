@@ -12,13 +12,19 @@ using com.softwareag.connectivity.ConnectivityPlugins;
 
 monitor Sender {
 	constant string UM_CHANNEL := "UM_TestChannel";
+	integer count := 0;
+	
 	action onload() {
 		ConnectivityPlugins.onApplicationInitialized();
 		on all wait(1.0) {
 			log "Sending SimpleEvent";
+			count := count + 1;
 			send SimpleEvent("The current epoch is " + currentTime.toString()) to UM_CHANNEL;
 		}
 
-		
+		on all wait(5.0) {
+			log "Send Count Event";
+			send CountEvent(count) to UM_CHANNEL;
+		}
 	}
 }

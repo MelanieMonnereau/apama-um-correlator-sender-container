@@ -11,3 +11,7 @@
 event SimpleEvent {
 	string s;
 }
+
+event CountEvent {
+	integer count;
+}
